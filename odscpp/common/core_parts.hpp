@@ -18,8 +18,13 @@ namespace wzs {
       m_data = new T[m_length];
     }
 
+    ~Array() {
+      if (m_data)
+        delete [] m_data;
+    }
+
     T& operator[](size_t index) {
-      assert(0 <= index && index <= m_length);
+      assert(0 <= index && index < m_length);
       return m_data[index];
     }
     const T& operator[](size_t index) const {
@@ -36,7 +41,6 @@ namespace wzs {
 
       return *this;
     }
-
 
   public:
     T*      m_data;

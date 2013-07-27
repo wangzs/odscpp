@@ -9,7 +9,7 @@ int main()
 {
   ////////////////////////////////////////
   ////  Data Block
-  string a[10] = {"wang", "hehe", "hello", "c++", "Linux", "test", "test", "zs", "^_^", "ods"};
+  string a[10] = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
 
   ////////////////////////////////////////////////////////
   // ArrayStack & FastArrayStack Test
@@ -79,6 +79,21 @@ int main()
   test_deque.TestPrint();
 
 
+  ////////////////////////////////////////////////////////
+  // DualArrayDeque Test
+  DualArrayDeque<string> test_dual_deque;
+  std::cout << "===================================\n@: array dual deque " << std::endl;
+  for (size_t i=0; i<5; ++i)
+    test_dual_deque.Add(i, a[rand() % 10]);
+  test_dual_deque.TestPrint();
+  std::cout << "\nadd: \"" << a[6] << "\" in [4].\n";
+  test_dual_deque.Add(4, a[6]);
+  test_dual_deque.TestPrint();
+  std::cout << "\nadd: \"" << a[0] << "\" in [2].\n"; 
+  test_dual_deque.Add(2, a[0]);
+  test_dual_deque.TestPrint();
+  std::cout << "\nRemove [2] element \"" << test_dual_deque.Remove(2) << "\".\n"; 
+  test_dual_deque.TestPrint();
 
 
   return 0;
