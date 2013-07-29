@@ -86,14 +86,36 @@ int main()
   for (size_t i=0; i<5; ++i)
     test_dual_deque.Add(i, a[rand() % 10]);
   test_dual_deque.TestPrint();
-  std::cout << "\nadd: \"" << a[6] << "\" in [4].\n";
-  test_dual_deque.Add(4, a[6]);
+  std::cout << "\nadd: \"" << a[6] << "\" in [0].\n";
+  test_dual_deque.Add(0, a[6]);
   test_dual_deque.TestPrint();
   std::cout << "\nadd: \"" << a[0] << "\" in [2].\n"; 
   test_dual_deque.Add(2, a[0]);
   test_dual_deque.TestPrint();
-  std::cout << "\nRemove [2] element \"" << test_dual_deque.Remove(2) << "\".\n"; 
+  std::cout << "Capacity: " << test_dual_deque.Capacity() << std::endl;
+  std::cout << "\nRemove [0] element \"" << test_dual_deque.Remove(0) << "\".\n"; 
+  std::cout << "Capacity: " << test_dual_deque.Capacity() << std::endl;
   test_dual_deque.TestPrint();
+  std::cout << "\nRemove [0] element \"" << test_dual_deque.Remove(0) << "\".\n"; 
+  test_dual_deque.TestPrint();
+  std::cout << "\nRemove [0] element \"" << test_dual_deque.Remove(0) << "\".\n"; 
+  test_dual_deque.TestPrint();
+
+  ////////////////////////////////////////////////////////
+  // RootishArrayStack Test
+  RootishArrayStack<string> test_rootis_stack;
+  std::cout << "===================================\n@: array rootish stack " << std::endl;
+  for (size_t i=0; i<5; ++i)
+    test_rootis_stack.Add(i, a[rand() % 10]);
+  test_rootis_stack.TestPrint();
+  std::cout << "\nadd: \"" << a[0] << "\" in [2].\n"; 
+  test_rootis_stack.Add(2, a[0]);
+  test_rootis_stack.TestPrint();
+  std::cout << "\nadd: \"" << a[3] << "\" in [1].\n"; 
+  test_rootis_stack.Add(1, a[3]);
+  test_rootis_stack.TestPrint();
+  std::cout << "\nRemove [1] element \"" << test_rootis_stack.Remove(1) << "\".\n"; 
+  test_rootis_stack.TestPrint();
 
 
   return 0;
