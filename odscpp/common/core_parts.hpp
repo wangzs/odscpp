@@ -6,8 +6,8 @@
 #include <cassert>
 #include <cstddef>
 
-#ifndef CORE_PARTS_HPP
-#define CORE_PARTS_HPP
+#ifndef ODSCPP_COREPARTS_HPP
+#define ODSCPP_COREPARTS_HPP
 
 namespace wzs {
   template <typename T> 

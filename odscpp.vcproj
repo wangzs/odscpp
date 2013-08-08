@@ -171,6 +171,10 @@
 				RelativePath=".\odscpp\lists\array_based.hpp"
 				>
 			</File>
+			<File
+				RelativePath=".\odscpp\lists\linked_based.hpp"
+				>
+			</File>
 			<Filter
 				Name="test"
 				>
@@ -178,7 +182,23 @@
 					RelativePath=".\test\test_array_based_lists.cpp"
 					>
 				</File>
+				<File
+					RelativePath=".\test\test_linked_based_lists.cpp"
+					>
+				</File>
 			</Filter>
+		</Filter>
+		<Filter
+			Name="exercises"
+			>
+			<File
+				RelativePath=".\odscpp\exercises\chapter2_arrayLists.h"
+				>
+			</File>
+			<File
+				RelativePath=".\odscpp\exercises\test_exercises.cpp"
+				>
+			</File>
 		</Filter>
 		<File
 			RelativePath=".\README"
